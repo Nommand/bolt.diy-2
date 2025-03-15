@@ -115,6 +115,10 @@ export default defineConfig((config) => {
         buffer: 'vite-plugin-node-polyfills/polyfills/buffer',
       },
     },
+    server: {
+    allowedHosts: true,
+    host: '0.0.0.0', // Permite conexões externas
+  },
     plugins: [
       nodePolyfills({
         include: ['buffer', 'process', 'util', 'stream'],
